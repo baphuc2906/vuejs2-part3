@@ -1,20 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-container>
+        <b-nav small  class="mx-auto bg-info d-flex justify-content-center">
+          <b-nav-item to="/" class="text-white">Home</b-nav-item>
+          <b-nav-item to="/cats"  class="text-white">Cats</b-nav-item>
+          <b-nav-item to="/dogs" class="text-white">Dogs</b-nav-item>
+        </b-nav>
+    </b-container>
+    <b-container>
+      <router-view/>
+    </b-container>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
 <style>
 #app {
@@ -23,6 +21,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
